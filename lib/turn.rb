@@ -1,12 +1,12 @@
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  while valid_move?(board, input) != true
+    if valid_move?(board,input) == true
+      move(board,input)
+      display_board(board)
+    else
     turn(board)
-    break
   end
-    move(board,input)
-    display_board(board)
 end
 
 def display_board(board)
